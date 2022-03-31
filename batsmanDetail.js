@@ -12,6 +12,7 @@ function cb(error,response,html){
     }else{
         const dom = new JSDOM(html);
       const document=dom.window.document;
+      
       let tabel=document.querySelectorAll(".batsman-cell.text-truncate.out a");
       for(let i=0;i<tabel.length;i++){
         let btlink=tabel[i].href;
